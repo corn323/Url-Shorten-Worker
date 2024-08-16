@@ -4,35 +4,33 @@
   <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <title>Shorter URL</title>
+  <title>縮網址服務</title>
   <link rel="stylesheet" href="https://crazypeace.github.io/Url-Shorten-Worker/styles.css">
-  <!-- 如果使用CDN资源就放开这一句, 把上面那一句注释掉
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazypeace/Url-Shorten-Worker/styles.css">
-  -->
+
 </head>
 <body>
   <div class="d-flex align-items-start flex-wrap">
   <div class="card shadow m-3">
-    <h5 class="card-header">A URL Shortener created using free Cloudflare worker and KV</h5>
+    <h5 class="card-header">技術:Cloudflare的Workers以及KV</h5>
     <div class="card-body">
       <h5 class="card-title"> </h5>
 
       <div class="input-group mb-3">
 
-          <span class="input-group-text" id="basic-addon1">Long URL</span>
+          <span class="input-group-text" id="basic-addon1">原網址</span>
 
         <input type="text" class="form-control" id="longURL" aria-describedby="basic-addon1" placeholder="Example: https://example.com/" oninput="loadUrlList()">
       </div>
 
       <div class="input-group mb-3">
 
-          <span class="input-group-text" id="basic-addon2">Custom Short URL</span>
+          <span class="input-group-text" id="basic-addon2">可製化網址</span>
 
-        <input type="text" class="form-control" id="keyPhrase" aria-describedby="basic-addon2" placeholder="As you wish">
+        <input type="text" class="form-control" id="keyPhrase" aria-describedby="basic-addon2" placeholder="可打英文數字(反正就是你想叫啥就叫啥，先搶先贏)">
       </div>
 
       <div class="input-group mb-3">
-        <button class="btn btn-primary" type="button" onclick='shorturl()' id="addBtn">Shorten it</button>
+        <button class="btn btn-primary" type="button" onclick='shorturl()' id="addBtn">好ㄟ縮短owob</button>
       </div>
 
       <div class="input-group mb-3">
@@ -45,11 +43,11 @@
     </div>
     
     <div class="card-footer">
-      <span> <a href="https://github.com/crazypeace/Url-Shorten-Worker/" target="_self">Fork me on GitHub</a> </span>
+      <span> <a href="https://github.com/crazypeace/Url-Shorten-Worker/" target="_self">點我</a>前往原作者GitHub</span>
     </div>
   </div>
 
-  <div class="card shadow m-3">
+  <div class="card shadow m-3" >
     <h5 class="card-header">LocalStorage List</h5>
     <div class="card-body">
       <h5 class="card-title"> </h5>
@@ -59,7 +57,7 @@
         <button class="btn btn-info" type="button" onclick='loadKV()' id="loadKV2localStgBtn">load KV to localStorage</button>
       </div>
 
-      <div class="card-text">
+      <div class="card-text" hidden>
         <div classs="list-group" id="urlList">
           <div class="mb-3 list-group-item">
             <div class="input-group">
@@ -98,8 +96,5 @@
   <script src="https://cdn.jsdelivr.net/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js" crossorigin="anonymous"></script>
 
   <script src="https://crazypeace.github.io/Url-Shorten-Worker/main.js" crossorigin="anonymous"></script>
-  <!-- 如果使用CDN资源就放开这一句, 把上面那一句注释掉
-    <script src="https://cdn.jsdelivr.net/gh/crazypeace/Url-Shorten-Worker/main.js" crossorigin="anonymous"></script>
-  -->
 </body>
 </html>
